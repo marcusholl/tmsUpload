@@ -6,8 +6,12 @@ node() {
         setupCommonPipelineEnvironment script: this
         scmInfo.GIT_COMMIT
         commonPipelineEnvironment.setGitCommitId(scmInfo.GIT_COMMIT)
+        echo "GIT_COMMIT: ${commonPipelineEnvironment.gitCommitId}"
     }
     stage('TMS_UPLOAD') {
+
+        echo "GIT_COMMIT 2: ${this.commonPipelineEnvironment.gitCommitId}"
+
         tmsUpload script: this,
                   mtaPath: 'dummy.mtar',
                   nodeName: '__piperIntegrationTest',
