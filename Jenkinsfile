@@ -16,8 +16,8 @@ node() {
                   mtaPath: 'dummy.mtar',
                   nodeName: '__piperIntegrationTest',
                   credentialsId: 'tmsUpload',
-                  verbose: true,
-                  customDescription: 'test123'
+                  verbose: true
+                  // customDescription: 'test123'
     }
 //    stage('VALIDATION') {
 //        sh '''#!/bin/bash
